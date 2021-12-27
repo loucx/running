@@ -408,7 +408,7 @@ if __name__ == "__main__":
     if not os.path.exists(OUTPUT_DIR):
         os.mkdir(OUTPUT_DIR)
     parser = argparse.ArgumentParser()
-    parser.add_argument("refresh_token", help="API refresh access token for nike.com")
+    parser.add_argument("eyJhbGciOiJSUzI1NiIsImtpZCI6ImY1Y2NmOWFkLTQzYzEtNDcyNS05OWJlLWRlNjUwMWYzZDA2OXNpZyJ9.eyJ0cnVzdCI6MTAwLCJpYXQiOjE2NDA1MzE3MzYsImV4cCI6MTY3MjA2NzczNiwiaXNzIjoib2F1dGgyaWR0IiwianRpIjoiMWY2ZmEyMjgtN2NkNS00Y2ZiLWE4NjEtZTg3N2FlOGY3Y2I3IiwibGF0IjoxNjM5ODc4NzY5LCJhdWQiOiJvYXV0aDJpZHQiLCJjbGkiOiJIbEhhMkNqZTNjdGxhT3FueHZnWlhOYUFzN1Q5bkF1SCIsInN1YiI6ImU4OWM2NWQwLWFhMDUtNDNjMy05OTMzLWJiMDY4ZDZhNGFjOSIsInNidCI6Im5pa2U6cGx1cyJ9.bmeLr2OW-4LJM8uGLH1dIyIuU_jPbxmZ7QJm3N9rRrWu9eTMwAca_rlnKpxu_gatt4g3Jyv3J369TipkG1f4KrIGXpjNis0aR2v4WT0LqCOmtvnNTG_PltaKsvEICPEpAcEbS9rtC9ZIkghv7f-MqNt2A0X0gRKZacq3JIHgp-cDuo4MNeJTkxPRDpRzkBrBLGjr3qRHiB5RJbFhH9_n1qBBhySxJdofps5UaOnN0FiK6eDS65UmC5fwYBLzEGkjTJkTC7BJP7Nf1tsUCJTIgnv5VBl7-szBvlHLNWdZ337lYzPizwv10ZHMh6aVBzdcw-d_zLDOr1bs_n-G2kmsgg", help="API refresh access token for nike.com")
     options = parser.parse_args()
     run(options.refresh_token)
 

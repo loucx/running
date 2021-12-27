@@ -30,7 +30,7 @@ env:
 jobs:
   sync:
     name: Sync
-    environment: loucx
+    # environment: loucx
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

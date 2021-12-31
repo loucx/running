@@ -1,10 +1,13 @@
 // const
 const MAPBOX_TOKEN =
-    'pk.eyJ1IjoibGl1eGluZHRjIiwiYSI6ImNraHZxMTh6dzE4N2cydHBnN293OGVtajIifQ.L-zroe7VKLd6jhCTzbF65w';
-//  'pk.eyJ1IjoieWlob25nMDYxOCIsImEiOiJja2J3M28xbG4wYzl0MzJxZm0ya2Fua2p2In0.PNKfkeQwYuyGOTT_x9BJ4Q';
+  'pk.eyJ1IjoieWlob25nMDYxOCIsImEiOiJja2J3M28xbG4wYzl0MzJxZm0ya2Fua2p2In0.PNKfkeQwYuyGOTT_x9BJ4Q';
 const MUNICIPALITY_CITIES_ARR = [
+  '北京市',
   '上海市',
-  '浙江省',
+  '天津市',
+  '重庆市',
+  '香港特别行政区',
+  '澳门特别行政区',
 ];
 
 // IF you outside China please make sure IS_CHINESE = false
@@ -12,8 +15,7 @@ const IS_CHINESE = true;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength, year) => {
   const yearStr = year === 'Total' ? '所有' : ` ${year} `;
-  //return `我用 App 记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
-  return `最好的跑步状态：不是快，而是强大；对一个跑者最好的称赞：不是快，而是坚强。`;
+  return `我用 App 记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
 }
 const ENGLISH_INFO_MESSAGE = (yearLength, year) =>
   `Running Journey with ${yearLength} Years, the table shows year ${year} data`;
@@ -24,13 +26,13 @@ const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
 const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '不要停下来，不要停下奔跑的脚步';
 
 const INFO_MESSAGE = IS_CHINESE ? CHINESE_INFO_MESSAGE : ENGLISH_INFO_MESSAGE;
-const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? '全马' : 'Full Marathon';
-const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? '半马' : 'Half Marathon';
-const MORNING_RUN_TITLE = IS_CHINESE ? '晨跑' : 'Morning Run';
-const MIDDAY_RUN_TITLE = IS_CHINESE ? '午间跑' : 'Midday Run';
-const AFTERNOON_RUN_TITLE = IS_CHINESE ? '午后跑' : 'Afternoon Run';
-const EVENING_RUN_TITLE = IS_CHINESE ? '傍晚跑' : 'Evening Run';
-const NIGHT_RUN_TITLE = IS_CHINESE ? '夜跑' : 'Night Run';
+const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? '全程马拉松' : 'Full Marathon';
+const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? '半程马拉松' : 'Half Marathon';
+const MORNING_RUN_TITLE = IS_CHINESE ? '清晨跑步' : 'Morning Run';
+const MIDDAY_RUN_TITLE = IS_CHINESE ? '午间跑步' : 'Midday Run';
+const AFTERNOON_RUN_TITLE = IS_CHINESE ? '午后跑步' : 'Afternoon Run';
+const EVENING_RUN_TITLE = IS_CHINESE ? '傍晚跑步' : 'Evening Run';
+const NIGHT_RUN_TITLE = IS_CHINESE ? '夜晚跑步' : 'Night Run';
 
 const RUN_TITLES = {
   FULL_MARATHON_RUN_TITLE,
@@ -53,6 +55,6 @@ export {
   USE_ANIMATION_FOR_GRID,
 };
 
-const nike = 'rgb(70,130,180)'; // if you want change the main color change here src/styles/variables.scss
+const nike = 'rgb(224,237,94)'; // if you want change the main color change here src/styles/variables.scss
 export const MAIN_COLOR = nike;
 export const PROVINCE_FILL_COLOR = '#47b8e0';

@@ -23,19 +23,7 @@ const RunTable = ({
     sortFuncInfo === 'BPM'
       ? a.average_heartrate - b.average_heartrate
       : b.average_heartrate - a.average_heartrate;
-  const sortStepFunc = (a, b) =>
-    sortFuncInfo === 'Step'
-      ? a.total_step - b.total_step
-      : b.total_step - a.total_step;
-  const sortTemperatureFunc = (a, b) =>
-    sortFuncInfo === 'Temperature'
-      ? a.temperature - b.temperature
-      : b.temperature - a.temperature;
-  const sortRunTimeFunc = (a, b) =>
-    sortFuncInfo === 'RunTime'
-      ? a.average_pace - b.average_pace
-      : b.average_pace - a.average_pace;
-  const sortTotalTimeFunc = (a, b) => {
+  const sortRunTimeFunc = (a, b) => {
     if (Number.isNaN(a.distance) || Number.isNaN(b.distance)
       || Number.isNaN(a.average_speed) || Number.isNaN(b.average_speed)) {
       return 0;
@@ -44,7 +32,7 @@ const RunTable = ({
     const bDistance = (b.distance / 1000.0).toFixed(1);
     const aPace = (1000.0 / 60.0) * (1.0 / a.average_speed);
     const bPace = (1000.0 / 60.0) * (1.0 / b.average_speed);
-    if (sortFuncInfo === 'TotalTime') {
+    if (sortFuncInfo === 'Time') {
       return aDistance * aPace - bDistance * bPace;
     } else {
       return bDistance * bPace - aDistance * aPace;
@@ -56,10 +44,7 @@ const RunTable = ({
     ['KM', sortKMFunc],
     ['Pace', sortPaceFunc],
     ['BPM', sortBPMFunc],
-    ['Step',sortStepFunc],
-    ['Temp', sortTemperatureFunc],
-    ['RunTime', sortRunTimeFunc],
-    ['TotalTime', sortTotalTimeFunc],
+    ['Time', sortRunTimeFunc],
     ['Date', sortDateFuncClick],
   ]);
   const handleClick = (e) => {

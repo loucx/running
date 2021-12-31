@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://loucx.github.io/running/sitemap/sitemap-index.xml
+Host: https://loucx.github.io

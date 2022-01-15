@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Running Page',
     siteUrl: 'https://loucx.github.io',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+    logo: 'https://s4.ax1x.com/2022/01/15/7G09Vs.jpg',
     description: 'Personal site and blog',
     navLinks: [
       {
